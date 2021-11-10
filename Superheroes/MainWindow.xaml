@@ -55,7 +55,7 @@
 
             <TextBlock x:Name="ContadorTextBlock" VerticalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="5,0"></TextBlock>
 
-            <Image RenderTransformOrigin="0.5,0.5" Tag="1" Style="{StaticResource ResourceKey=FlechaImagen}">
+            <Image Tag="1" RenderTransformOrigin="0.5,0.5" Style="{StaticResource ResourceKey=FlechaImagen}">
                 <Image.LayoutTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="1" ScaleX="-1"/>

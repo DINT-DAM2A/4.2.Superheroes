@@ -6,7 +6,6 @@ namespace Superheroes
 
     class Superheroe : INotifyPropertyChanged
     {
-
         private string nombre;
         private string imagen;
         private bool vengador;

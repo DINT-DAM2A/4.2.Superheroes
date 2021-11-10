@@ -7,15 +7,20 @@ namespace Superheroes
 {
     public partial class MainWindow : Window
     {
-        List<Superheroe> listaHeroes = Superheroe.GetSamples();
-        int count = 0;
-        Superheroe heroe = new Superheroe();
+        List<Superheroe> listaHeroes;
+        int count;
+        Superheroe heroe;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            listaHeroes = Superheroe.GetSamples();
+            heroe = new Superheroe();
+            count = 0;
+
             MainDockPanel.DataContext = heroe;
+
             CargarHeroe();
         }
 
@@ -23,9 +28,9 @@ namespace Superheroes
         {
             int num = Convert.ToInt32((sender as Image).Tag.ToString());
 
-            if (num > 0 && (count + num) < listaHeroes.Count)
+            if (num == 1 && (count + num) < listaHeroes.Count)
                 count++;
-            else if (num < 0 && (count + num) >= 0)
+            else if (num == -1 && (count + num) >= 0)
                 count--;
 
             CargarHeroe();
